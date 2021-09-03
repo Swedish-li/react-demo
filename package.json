@@ -2,6 +2,7 @@
   "name": "react-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://swedish-li.github.io/react-demo/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
