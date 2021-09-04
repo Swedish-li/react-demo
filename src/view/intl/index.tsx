@@ -1,11 +1,12 @@
-import React from "react";
-import { useContext } from "react";
-import { useState } from "react";
+import React, { FC, useEffect, useContext, useState } from "react";
 import {
   FormattedMessage,
   //   FormattedNumber,
   IntlProvider,
 } from "react-intl";
+import styled from "styled-components";
+import { Container } from "../../components";
+import { International } from "../../components/International";
 
 // https://github.com/formatjs/formatjs/tree/main/packages/react-intl/examples
 
@@ -38,18 +39,14 @@ const LocaleContext = React.createContext<LocaleContextType>({
 });
 // Consumer: LocaleConsumer,
 const { Provider: RawLocaleProvider } = LocaleContext;
-// const messagesInFrench = {
-//   myMessage: "Aujourd'hui, c'est le {ts, date, ::yyyyMMdd}",
-// };
 
-const LocaleProvider: React.FC = ({ children }) => {
+const LocaleProvider: FC = ({ children }) => {
   const [locale, setLocale] = useState(defaultLocale);
   const [messages, setMessages] = useState(defaultMessages);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const changeLocale = async () => {
       if (locale !== defaultLocale) {
-        console.info(locale, "change local----");
         // It seems like Webpack is unable to use aliases for lazy imports
         const mod = await import(`./locale/${locale}.json`);
         setMessages(mod.default);
@@ -83,16 +80,23 @@ const LocaleProvider: React.FC = ({ children }) => {
   );
 };
 
+const IconContainer = styled.div`
+  font-size: 5em;
+  margin-bottom: 1rem;
+`;
+
 const Card = () => {
   const { setLocale, locale } = useContext(LocaleContext);
 
   return (
-    <>
+    <Container>
+      <IconContainer>
+        <International />
+      </IconContainer>
       <select
         value={locale}
         onChange={(e) => {
           const value = e.target.value as Locale;
-          console.info(value);
           setLocale(value);
         }}
       >
@@ -108,7 +112,7 @@ const Card = () => {
       <p>
         <FormattedMessage id="helloWorld" />
       </p>
-    </>
+    </Container>
   );
 };
 

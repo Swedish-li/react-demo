@@ -1,7 +1,8 @@
 import { Switch, Route } from "react-router-dom";
-import { Counter } from "../features/counter/Counter";
-import Home from "../view/Home";
-import Intl from "../view/intl";
+import { lazy } from "react";
+const Home = lazy(() => import("../view/Home"));
+const Intl = lazy(() => import("../view/intl"));
+const CounterView = lazy(() => import("../view/counter"));
 
 const Routes = () => {
   return (
@@ -10,7 +11,7 @@ const Routes = () => {
         <Home />
       </Route>
       <Route path="/counter">
-        <Counter />
+        <CounterView />
       </Route>
       <Route path="/intl">
         <Intl />
