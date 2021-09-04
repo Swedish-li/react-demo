@@ -62,7 +62,7 @@ export const Toggle = () => {
         name="switch"
         id="switch"
         onClick={toggleTheme}
-        checked={theme === "dark"}
+        defaultChecked={theme === "dark"}
       />
       <label htmlFor="switch"></label>
     </ToggleWrapper>

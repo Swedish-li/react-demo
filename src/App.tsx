@@ -14,7 +14,7 @@ function App() {
   return (
     <AppWrapper>
       <React.Suspense fallback={<AppLoader />}>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
           <Routes />
         </Router>
       </React.Suspense>

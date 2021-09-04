@@ -15,7 +15,10 @@ const lightTheme: DefaultTheme = {
   },
 };
 
-export type AppThemeType = "dark" | "light";
+const DARK = "dark";
+const LIGHT = "light";
+
+export type AppThemeType = typeof DARK | typeof LIGHT;
 
 interface AppThemeContextType {
   theme: AppThemeType;
@@ -23,16 +26,32 @@ interface AppThemeContextType {
 }
 
 export const AppThemeContext = React.createContext<AppThemeContextType>({
-  theme: "light",
+  theme: LIGHT,
   toggleTheme: () => undefined,
 });
 
 const { Provider } = AppThemeContext;
 
-const AppThemeProvider: FC = ({ children }) => {
-  const [appTheme, setAppTheme] = useState<AppThemeType>("light");
+const isAppTheme = (t: string | null): t is AppThemeType =>
+  t === DARK || t === LIGHT;
 
-  const theme = appTheme === "dark" ? darkTheme : lightTheme;
+const LOCAL_STORE_KEY = "app.theme";
+
+const getDefaultTheme = (): AppThemeType => {
+  const localTheme = localStorage.getItem(LOCAL_STORE_KEY);
+  if (isAppTheme(localTheme)) {
+    return localTheme;
+  }
+  const userPrefersLight =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches;
+  return userPrefersLight ? LIGHT : DARK;
+};
+
+const AppThemeProvider: FC = ({ children }) => {
+  const [appTheme, setAppTheme] = useState<AppThemeType>(getDefaultTheme());
+
+  const theme = appTheme === DARK ? darkTheme : lightTheme;
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,7 +59,8 @@ const AppThemeProvider: FC = ({ children }) => {
         value={{
           theme: appTheme,
           toggleTheme: () => {
-            const newTheme = appTheme === "dark" ? "light" : "dark";
+            const newTheme = appTheme === DARK ? LIGHT : DARK;
+            localStorage.setItem(LOCAL_STORE_KEY, newTheme);
             setAppTheme(newTheme);
           },
         }}
