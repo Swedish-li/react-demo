@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Container } from "./Container";
-const color = "#764ABC";
+// const color = "#764ABC";
 const size = "3.5em";
 const lineWidth = ".3em";
 
@@ -21,8 +21,9 @@ const Loader = styled.div`
     height: ${size};
     margin: 8px;
     border-radius: 50%;
-    border: ${lineWidth} solid ${color};
-    border-color: ${color} transparent ${color} transparent;
+    border: ${lineWidth} solid ${({ theme }) => theme.primary.color};
+    border-color: ${({ theme }) => theme.primary.color} transparent
+      ${({ theme }) => theme.primary.color} transparent;
 
     animation: ${dualRing} 1.2s linear infinite;
   }
@@ -33,4 +34,3 @@ export const AppLoader = () => (
     <Loader />
   </Container>
 );
-

@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { Container } from "../components";
+import { Toggle } from "../components/Toggle";
+
+const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.primary.color};
+  font-weight: bold;
+`;
 
 const Home = () => {
   return (
     <Container>
+      <Toggle />
       <ul>
         <li>
-          <Link to="/counter">Counter</Link>
+          <StyledLink to="/counter">Counter</StyledLink>
         </li>
         <li>
-          <Link to="/intl">i18n</Link>
+          <StyledLink to="/intl">i18n</StyledLink>
         </li>
       </ul>
     </Container>

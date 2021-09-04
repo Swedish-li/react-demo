@@ -83,6 +83,18 @@ const LocaleProvider: FC = ({ children }) => {
 const IconContainer = styled.div`
   font-size: 5em;
   margin-bottom: 1rem;
+  color: ${({ theme }) => theme.primary.color};
+`;
+
+const LocaleSelect = styled.select`
+  font-size: 0.6em;
+  color: ${({ theme }) => theme.primary.color};
+  background-color: ${({ theme }) => theme.primary.backgroundColor};
+  border-radius: 0.2rem;
+`;
+
+const LocaleOption = styled.option`
+  background-color: ${({ theme }) => theme.primary.backgroundColor};
 `;
 
 const Card = () => {
@@ -93,7 +105,7 @@ const Card = () => {
       <IconContainer>
         <International />
       </IconContainer>
-      <select
+      <LocaleSelect
         value={locale}
         onChange={(e) => {
           const value = e.target.value as Locale;
@@ -103,12 +115,12 @@ const Card = () => {
         {Object.keys(localNames).map((k) => {
           const key = k as Locale;
           return (
-            <option value={k} key={k}>
+            <LocaleOption value={k} key={k}>
               {localNames[key]}
-            </option>
+            </LocaleOption>
           );
         })}
-      </select>
+      </LocaleSelect>
       <p>
         <FormattedMessage id="helloWorld" />
       </p>
