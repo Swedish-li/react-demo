@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-demo"]=this["webpackJsonpreact-demo"]||[]).push([[9],{68:function(e){e.exports=JSON.parse('{"helloWorld":"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\uff01"}')}}]);
+//# sourceMappingURL=9.59a929d8.chunk.js.map

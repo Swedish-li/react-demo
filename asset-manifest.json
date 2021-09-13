@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/react-demo/static/css/main.5d6ab284.chunk.css",
+    "main.js": "/react-demo/static/js/main.38b985eb.chunk.js",
+    "main.js.map": "/react-demo/static/js/main.38b985eb.chunk.js.map",
+    "runtime-main.js": "/react-demo/static/js/runtime-main.d83de205.js",
+    "runtime-main.js.map": "/react-demo/static/js/runtime-main.d83de205.js.map",
+    "static/js/2.edd608ae.chunk.js": "/react-demo/static/js/2.edd608ae.chunk.js",
+    "static/js/2.edd608ae.chunk.js.map": "/react-demo/static/js/2.edd608ae.chunk.js.map",
+    "static/js/3.73f66e28.chunk.js": "/react-demo/static/js/3.73f66e28.chunk.js",
+    "static/js/3.73f66e28.chunk.js.map": "/react-demo/static/js/3.73f66e28.chunk.js.map",
+    "static/js/4.685e04dd.chunk.js": "/react-demo/static/js/4.685e04dd.chunk.js",
+    "static/js/4.685e04dd.chunk.js.map": "/react-demo/static/js/4.685e04dd.chunk.js.map",
+    "static/css/5.4afa609d.chunk.css": "/react-demo/static/css/5.4afa609d.chunk.css",
+    "static/js/5.6b406a3b.chunk.js": "/react-demo/static/js/5.6b406a3b.chunk.js",
+    "static/js/5.6b406a3b.chunk.js.map": "/react-demo/static/js/5.6b406a3b.chunk.js.map",
+    "static/js/6.c42bc399.chunk.js": "/react-demo/static/js/6.c42bc399.chunk.js",
+    "static/js/6.c42bc399.chunk.js.map": "/react-demo/static/js/6.c42bc399.chunk.js.map",
+    "static/js/7.c7a8c1ab.chunk.js": "/react-demo/static/js/7.c7a8c1ab.chunk.js",
+    "static/js/7.c7a8c1ab.chunk.js.map": "/react-demo/static/js/7.c7a8c1ab.chunk.js.map",
+    "static/js/8.d7adbfcb.chunk.js": "/react-demo/static/js/8.d7adbfcb.chunk.js",
+    "static/js/8.d7adbfcb.chunk.js.map": "/react-demo/static/js/8.d7adbfcb.chunk.js.map",
+    "static/js/9.59a929d8.chunk.js": "/react-demo/static/js/9.59a929d8.chunk.js",
+    "static/js/9.59a929d8.chunk.js.map": "/react-demo/static/js/9.59a929d8.chunk.js.map",
+    "static/js/10.a33a155c.chunk.js": "/react-demo/static/js/10.a33a155c.chunk.js",
+    "static/js/10.a33a155c.chunk.js.map": "/react-demo/static/js/10.a33a155c.chunk.js.map",
+    "index.html": "/react-demo/index.html",
+    "static/css/5.4afa609d.chunk.css.map": "/react-demo/static/css/5.4afa609d.chunk.css.map",
+    "static/css/main.5d6ab284.chunk.css.map": "/react-demo/static/css/main.5d6ab284.chunk.css.map",
+    "static/js/2.edd608ae.chunk.js.LICENSE.txt": "/react-demo/static/js/2.edd608ae.chunk.js.LICENSE.txt",
+    "static/js/3.73f66e28.chunk.js.LICENSE.txt": "/react-demo/static/js/3.73f66e28.chunk.js.LICENSE.txt",
+    "static/media/logo.b2e5a01e.svg": "/react-demo/static/media/logo.b2e5a01e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d83de205.js",
+    "static/js/2.edd608ae.chunk.js",
+    "static/css/main.5d6ab284.chunk.css",
+    "static/js/main.38b985eb.chunk.js"
+  ]
+}
